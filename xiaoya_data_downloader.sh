@@ -32,6 +32,12 @@ function ERROR() {
     echo -e "${Time} ${ERROR} ${1}"
 }
 
+# 弃用此脚本
+if [ -n "$(date)" ]; then
+    ERROR "此脚本已弃用！"
+    exit 0
+fi
+
 files=(tvbox.zip update.zip index.zip)
 base_urls=(
     "https://gitlab.com/xiaoyaliu/data/-/raw/main/"
@@ -40,6 +46,12 @@ base_urls=(
     "https://fastly.jsdelivr.net/gh/xiaoyaliu00/data@latest/"
     "https://521github.com/extdomains/github.com/xiaoyaliu00/data/raw/main/"
     "https://cors.zme.ink/https://raw.githubusercontent.com/xiaoyaliu00/data/main/"
+    "https://git.jasonml.xyz/https://raw.githubusercontent.com/xiaoyaliu00/data/main/"
+    "https://cdn.wygg.shop/https://raw.githubusercontent.com/xiaoyaliu00/data/main/"
+    "https://gh.ddlc.top/https://raw.githubusercontent.com/xiaoyaliu00/data/main/"
+    "https://git.886.be/https://raw.githubusercontent.com/xiaoyaliu00/data/main/"
+    "https://gh.idayer.com/https://raw.githubusercontent.com/xiaoyaliu00/data/main/"
+    "https://slink.ltd/https://raw.githubusercontent.com/xiaoyaliu00/data/main/"
 )
 
 if [ -z "${1}" ]; then

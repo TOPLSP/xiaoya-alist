@@ -1,4 +1,4 @@
-name: xiaoya emby library
+name: xiaoya glue python
 
 on:
   workflow_dispatch:
@@ -6,8 +6,8 @@ on:
     branches:
       - master
     paths:
-      - "emby_library/**"
-      - ".github/workflows/emby_library.yml"
+      - "glue_python/**"
+      - ".github/workflows/glue_python.yml"
 
 jobs:
   build:
@@ -22,9 +22,9 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/xiaoya-emby-library
+          images: ${{ secrets.DOCKER_USERNAME }}/xiaoya-glue
           tags: |
-            type=raw,value=latest
+            type=raw,value=python
 
       -
         name: Set Up QEMU
@@ -45,8 +45,8 @@ jobs:
         name: Build Image
         uses: docker/build-push-action@v6
         with:
-          context: ./emby_library
-          file: emby_library/Dockerfile
+          context: ./glue_python
+          file: glue_python/Dockerfile
           platforms: |
             linux/amd64
             linux/arm64/v8
@@ -60,6 +60,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: ${{ secrets.DOCKER_USERNAME }}/xiaoya-emby-library
+          repository: ${{ secrets.DOCKER_USERNAME }}/xiaoya-glue
           short-description: 小雅Alist的相关周边
           readme-filepath: ./README.md

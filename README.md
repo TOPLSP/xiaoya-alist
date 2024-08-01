@@ -8,9 +8,6 @@
 
 ![](https://count.getloli.com/get/@DDS-Derek.xiaoya-alist.readme?theme=rule34)
 
-> [!IMPORTANT]
-> 脚本作者 DDSRem 维护精力有限，脚本更新速度将放缓！
-
 - [main.sh](#mainsh)
   - [使用](#使用)
   - [功能列表](#功能列表)
@@ -147,11 +144,18 @@ Docker镜像源选择 -> 9 6
 
 ## 相关地址
 
-[https://github.com/DDS-Derek/xiaoya-alist](https://github.com/DDS-Derek/xiaoya-alist)
-
-小雅官方 [Telegram](https://t.me/xiaoyaliu00) 交流群
+- [https://github.com/DDS-Derek/xiaoya-alist](https://github.com/DDS-Derek/xiaoya-alist)
+- [https://hub.docker.com/r/ddsderek/xiaoya-emd](https://hub.docker.com/r/ddsderek/xiaoya-emd)
+- [https://hub.docker.com/r/ddsderek/xiaoya-proxy](https://hub.docker.com/r/ddsderek/xiaoya-proxy)
+- [https://hub.docker.com/r/ddsderek/xiaoya-cron](https://hub.docker.com/r/ddsderek/xiaoya-cron)
+- [https://hub.docker.com/r/ddsderek/xiaoya-glue](https://hub.docker.com/r/ddsderek/xiaoya-glue)
+- [https://hub.docker.com/r/ddsderek/xiaoya-115cleaner](https://hub.docker.com/r/ddsderek/xiaoya-115cleaner)
+- 小雅官方 [Telegram](https://t.me/xiaoyaliu00) 交流群
 
 ## 通用兼容性测试报告
+
+> [!NOTE]
+> ✅代表测试通过且兼容；❌代表不兼容；🚧代表未经过充分测试兼容性不确定！
 
 |             软件名称             | x86-64  \| amd64 | arm64 \| arm64v8 | armhf \| armv7 |
 | :------------------------------: | :--------------: | :---------------: | :-------------: |
@@ -163,6 +167,7 @@ Docker镜像源选择 -> 9 6
 |           Onelist            |        ✅         |         ✅         |        ✅        |
 | 小雅元数据爬虫（xiaoya-emd） |        ✅         |         ✅         |        ✅        |
 | 小雅Cron容器（xiaoya-cron）  |        ✅         |         ✅         |        ✅        |
+| 小雅代理容器（xiaoya-proxy）  |        ✅         |         ✅         |        ✅        |
 
 |    系统名称     | main.sh | emby_config_editor.sh |
 | :-------------: | :-----: | :-------------------: |
@@ -186,14 +191,16 @@ Docker镜像源选择 -> 9 6
 |     EulerOS     |    ✅    |           ✅           |
 |  Amazon Linux   |    ✅    |           ✅           |
 |     Alpine      |    ✅    |           ✅           |
+|      MacOS      |    🚧    |           🚧           |
 |     UnRaid      |    ✅    |           ✅           |
 | OpenMediaVault  |    ✅    |           ✅           |
 |      QNAP       |    ✅    |           ✅           |
 |     OpenWRT     |    ✅    |           ✅           |
 |    Synology     |    ✅    |           ✅           |
-|  TrueNAS CORE   |    ✅    |           ✅           |
-|  TrueNAS SCALE  |    ✅    |           ✅           |
-|     UGREEN      |    ✅    |           ✅           |
+|  TrueNAS CORE   |    🚧    |           🚧           |
+|  TrueNAS SCALE  |    🚧    |           🚧           |
+|      UGOS       |    ✅    |           ✅           |
+|     UGOS Pro    |    ✅    |           ✅           |
 |   LibreELEC     |    ❌    |           ❌           |
 
 ## 免责声明
